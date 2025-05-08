@@ -1,7 +1,7 @@
 
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Environment, ContactShadows } from "@react-three/drei";
+import { OrbitControls, Environment, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
@@ -20,7 +20,7 @@ function TShirtModel(props: any) {
   return (
     <mesh ref={ref} {...props} castShadow receiveShadow>
       <boxGeometry args={[1, 1.5, 0.2]} />
-      <meshStandardMaterial color="#CABA7F" metalness={0.4} roughness={0.2} />
+      <meshStandardMaterial attach="material" color="#CABA7F" metalness={0.4} roughness={0.2} />
     </mesh>
   );
 }

@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, MeshDistortMaterial, Sphere } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
@@ -33,8 +33,8 @@ const AboutSection = () => {
               <pointLight position={[10, 10, 10]} />
               <Sphere args={[1, 64, 64]}>
                 <MeshDistortMaterial 
+                  attach="material"
                   color="#CABA7F" 
-                  attach="material" 
                   distort={0.4} 
                   speed={1.5} 
                   roughness={0.2}
